@@ -41,7 +41,9 @@ Edit this document to include your answers after each question. Make sure to lea
     A closure is a series of functions that access outside of their lexical scope. They can reach outside of what we would normally think a function has access to to reference variables.
 
 4. Describe the four rules of the 'this' keyword.
-
+    you can use it as a pointer to an object.
+    it is used for binding attributes in new class objects.
+    do not use arrow functions when using 'this'
     Global binding: when 'this' is used it will be bound to the entire window or console object that contains the entirety of the page.
     Implicit binding: when used in calling a function, 'this' referrs to the object that precedes it.
     New binding: When using a constructor function, 'this' referrs to the specific instance that the constructor is creating.
