@@ -92,7 +92,9 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
 
-unisWithUni.push(graduates.filter(i => i.universities == 'uni'))
+let query ='uni';
+
+unisWithUni.push(graduates.filter(i => i.university.toLowerCase().indexOf(query.toLowerCase()) !== -1))
 
 console.log(unisWithUni);
 
