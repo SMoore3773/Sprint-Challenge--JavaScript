@@ -90,11 +90,27 @@ graduates.forEach(i => contactInfo.push(`${i.first_name} ${i.email}`))
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
 
-let query ='uni';
 
-unisWithUni.push(graduates.filter(i => i.university.toLowerCase().indexOf(query.toLowerCase()) !== -1))
+// //////   here for array of full objects /// 
+
+// const unisWithUni = graduates.filter(i => i.university.toLowerCase().indexOf('uni') !== -1);
+
+/////////     here for array of strings of uni names \|/
+
+// let unisStr = [];
+// graduates.forEach(i => unisStr.push(`${i.university}`))
+// const unisWithUni = unisStr.filter(i => i.toLowerCase().indexOf('uni') !== -1);
+
+let unisStr = [];
+graduates.forEach(i => unisStr.push(`${i.university}`))
+const unisedit = unisStr.filter(i => i.toLowerCase().indexOf('uni') !== -1);
+let a = {university:`${unisedit[0]}`};
+let b = {university:`${unisedit[1]}`};
+let c = {university:`${unisedit[2]}`};
+let d = {university:`${unisedit[3]}`};
+let e = {university:`${unisedit[4]}`};
+let unisWithUni = [a,b,c,d,e];
 
 console.log(unisWithUni);
 
